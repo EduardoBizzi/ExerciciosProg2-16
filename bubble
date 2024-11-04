@@ -1,0 +1,21 @@
+Considerando a ordenação por flutuação, quantas comparações e quantas
+trocas são realizadas para a ordenação de v2? 
+R: 9 comparações e 5 trocas
+
+Discuta sobre as diferenças na quantidade de comparações e de trocas entre
+os métodos de ordenação por seleção e por flutuação?
+No método por flutuação ele troca os valores a cada comparação se cumprir o requisito. Já no método
+por seleção ele troca somente uma vez os valores a cada vez que percorre o vetor.
+
+Implemente uma versão recursiva do Bubble sort.
+void bubble (int *v, int n){
+    if(n == 1){
+        return 0;
+    }
+    for (int i = 0; i < n - 1; i++) {
+        if (v[i] > v[i + 1]) {
+            swap(v[i], v[i + 1]);
+        }
+}
+    bubble(v, n-1);
+}

@@ -1,0 +1,25 @@
+O que acontece se trocarmos a condição i < n-1 da linha 4 por i < n?
+R: O código fará uma interação a mais do que o necessário.
+
+Ao ordenar v2, o que acontece quando há elementos iguais? É possível saber se a
+ordem dos elementos iguais será mantida (o elemento que inicialmente ocupa a
+posição 2 continuará a vir antes do elemento que foi inserido na posição 3)? 
+R: Quando os elementos são iguais eles não trocam de posição, apenas se for de menor valor.
+
+Quantas trocas são realizadas quando a função selection() é executada para v3?
+E para v4?
+R: Em v3 nenhuma troca, e em v4 duas trocas.
+
+Modifique o algoritmo, para que a ordenação seja decrescente.
+void selection (int *v, int n){
+ int i, j, maior;
+ for (i = 0; i < n-1; i++){
+ maior = i;
+ for (j = i+1; j < n; j++){
+ if (v[j] > v[maior])
+ maior = j;
+ }
+ if (v[maior] != v[i])
+ troca (&v[maior], &v[i]);
+ }
+}
